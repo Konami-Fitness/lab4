@@ -16,4 +16,3 @@ iterate(document.getRootNode());
 
 //html element is document.getRootNode().children[0]
 
-//<!doctype html>
