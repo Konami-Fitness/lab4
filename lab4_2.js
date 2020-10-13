@@ -1,3 +1,6 @@
+
+	var flag = false; 
+
 function iterate(node, total) {
 	var children = node.childNodes;
 	// children contains the child nodes of the current node element
@@ -11,6 +14,18 @@ function iterate(node, total) {
 		// for each of the child nodes print dashes times the depth level and its tag name
 		if(children[x].nodeType === 1) {
 			// if the node is an element node
+
+			if(children[x].tagName.toLowerCase() == "body") {
+				flag = true;
+			} else if(children[x].tagName.toLowerCase() == "script") {
+				flag = false; 
+			}
+
+			if(flag == true) {
+				//alert(children[x].tagName);
+				children[x].addEventListener("click", function(){alert(event.currentTarget.tagName)});
+			}
+
 			total.str += '-'.repeat(total.level) + children[x].tagName + '\n';
 			total.level++;
 			// increase level by one before the recursive call to add a layer of depth
