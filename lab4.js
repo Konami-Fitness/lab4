@@ -2,10 +2,14 @@
 
 
 function iterate(node) {
+	if(node.childNodes.length === 0) {
+		return;
+	}
 	var children = node.childNodes
 	for(x in children) {
 		if(children[x].nodeType === 1) {
-			alert(children[x])
+			alert(children[x]);
+			iterate(children[x]);
 		}
 	}
 
@@ -14,7 +18,7 @@ function iterate(node) {
 }
 
 
-iterate(document.getRootNode().children[0].children[0]);
+iterate(document.getRootNode().children[0]);
 
 
 
