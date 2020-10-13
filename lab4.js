@@ -2,8 +2,11 @@
 
 
 function iterate(node) {
-	for(x in node.children) {
-		alert(node.children[x]);
+	var children = node.childNodes
+	for(x in children) {
+		if(children[x].nodeType === 1) {
+			alert(children[x])
+		}
 	}
 
 		
