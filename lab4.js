@@ -1,18 +1,21 @@
 
 
 
-
 function iterate(node) {
-		alert(node.children[0].children[1].children[0]);
-	
+	for(x in node.children) {
+		alert(node.children[x]);
+	}
+
+		
 
 }
 
 
-iterate(document.getRootNode());
+iterate(document.getRootNode().children[0].children[0]);
 
 
 
 
 //html element is document.getRootNode().children[0]
+
 
