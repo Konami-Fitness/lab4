@@ -1,5 +1,5 @@
 
-	var flag = false; 
+	var flag = false;
 
 function iterate(node, total) {
 	var children = node.childNodes;
@@ -18,7 +18,7 @@ function iterate(node, total) {
 			if(children[x].tagName.toLowerCase() == "body") {
 				flag = true;
 			} else if(children[x].tagName.toLowerCase() == "script") {
-				flag = false; 
+				flag = false;
 			}
 
 			if(flag == true) {
