@@ -1,5 +1,19 @@
-To insert the quote at the end, I created an array of all the quote elements, took the last item in the array and cloned it, then edited the innerHTML with the quote. Then I used append child to add it on the to end of the document.
+1)
 
-For the onmouseover and onmouseout listeners, I put all the div elements into an array. Then I used a for loop to iterate through them. For each one, the loop sets the onmouseover attribute equal to a function. The function uses the this keyword to edit the CSS for that div, changing the background color and margin. For onomuseout, I followed the same process, just reversing the the background color back to white and the margin back to 0.
+2) For part 2, we took the code from part 1, and bool flag so that we could make
+sure that alert boxes would only display if the element tags were in the body.
+If the clicked element was in the body tag, then an event listener would trigger
+an alert box with the currentTarget elements tag name. The currentTarget was
+essential to preserve event bubbling since the alerts needed to start with the
+innermost element and change as different event listeners triggered the event. 
 
-For the creativity part, I added some color to the page and a transition time of 0.5 seconds on the CSS effects to make the page feel more polished and dynamic.
+3) To insert the quote at the end, I created an array of all the quote elements,
+took the last item in the array and cloned it, then edited the innerHTML with
+the quote. Then I used append child to add it on the to end of the document.
+
+For the onmouseover and onmouseout listeners, I put all the div elements into
+an array. Then I used a for loop to iterate through them. For each one, the loop
+sets the onmouseover attribute equal to a function. The function uses the this
+keyword to edit the CSS for that div, changing the background color and margin.
+For onomuseout, I followed the same process, just reversing the the background
+color back to white and the margin back to 0.
