@@ -1,16 +1,20 @@
 
-
-function iterate(node, total) {
-	if(node.childNodes.length === 0) {
-		return;
-	}
+function iterate(node, total, lvl) {
 	var children = node.childNodes;
+
+	if(level.num == 0) {
+		total.str += '-'.repeat(level.num) + node.tagName + "\n";
+		level.num++;
+	}
+
 	for(x in children) {
 		if(children[x].nodeType === 1) {
-			//alert(children[x]);
-			total.str += children[x];
+			total.str += '-'.repeat(level.num) + children[x].tagName + "\n";
+			level.num++;
 
-			iterate(children[x], total);
+			iterate(children[x], total, level);
+			level.num--;
+
 
 		}
 	}
@@ -19,13 +23,17 @@ function iterate(node, total) {
 
 }
 
-
-var object1 = {
+var level = {
+	num: 0
+};
+var stringObj = {
 	str: ""
 };
 
-var t = iterate(document.getRootNode().children[0], object1);
+var t = iterate(document.getRootNode().children[0], stringObj, level);
 
-alert(t);
+
+document.getElementById("info").innerHTML = t;
+
 
 //html element is document.getRootNode().children[0]
