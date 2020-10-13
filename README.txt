@@ -44,3 +44,14 @@ sets the onmouseover attribute equal to a function. The function uses the this
 keyword to edit the CSS for that div, changing the background color and margin.
 For onomuseout, I followed the same process, just reversing the the background
 color back to white and the margin back to 0.
+
+Teddy creativity
+For part 1a, I created an object to contain the level of depth within the html
+tags and a string to contain the the expected output in the tree format. I
+decided to create an object to reduce the amount of code that I needed and to
+help my other teammates read the code. For part 1b, instead of using a string,
+I added the tag tree to an array so that I could create a new paragraph tag at
+end of the body, set its attribute to "part1b", and added br tags between each
+html tag to preserve the proper output. In part 2, I created a bool flag to make
+sure that a user would only receive alerts if the clicked object, bubbling up
+was in the body.
