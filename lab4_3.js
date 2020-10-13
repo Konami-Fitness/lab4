@@ -17,11 +17,12 @@ var i;
 // new onmouseover and onmouseout attributes
 for (i = 0; i < element.length; i++) {
 	element[i].onmouseover = function() {
-			this.style.backgroundColor = "red";
+			this.style.backgroundColor = "#27F89C";
+			this.style.transition = "0.5s"
 			this.style.marginLeft = "10px";
 		};
 	element[i].onmouseout = function() {
-			this.style.backgroundColor = "white";
+			this.style.backgroundColor = "darkgrey";
 			this.style.marginLeft = "0px";
 		};
 }
